@@ -1,0 +1,113 @@
+unit UProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Mask, Vcl.DBCtrls, Vcl.ComCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  dxGDIPlusClasses, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error,
+  FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
+  FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.PG, FireDAC.Phys.PGDef,
+  FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
+  FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TFrmProduto = class(TForm)
+    Panel1: TPanel;
+    BtnIncluir: TBitBtn;
+    BtnSalvar: TBitBtn;
+    BtnCancelar: TBitBtn;
+    BtnAlterar: TBitBtn;
+    BtnDeletar: TBitBtn;
+    BtnPesquisar: TBitBtn;
+    PgCadastroProdutos: TPageControl;
+    Cadastros: TTabSheet;
+    EdtCodBarras: TDBEdit;
+    Label1: TLabel;
+    EdtCodReferencia: TDBEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    CbAtivo: TDBComboBox;
+    Label5: TLabel;
+    DbTipoProduto: TDBComboBox;
+    Label6: TLabel;
+    CbUsoConsumo: TDBComboBox;
+    Label7: TLabel;
+    CbPermiteVenda: TDBComboBox;
+    Label8: TLabel;
+    GbDetalhes: TGroupBox;
+    CbGrupoProduto: TDBComboBox;
+    Label9: TLabel;
+    CbCategoria: TDBComboBox;
+    Label10: TLabel;
+    EdtFornecedor: TDBEdit;
+    Label11: TLabel;
+    EdtEstoque: TDBEdit;
+    Label12: TLabel;
+    EdtMarca: TDBEdit;
+    Label13: TLabel;
+    GpValoresProduto: TGroupBox;
+    EdtValorCompra: TDBEdit;
+    Label14: TLabel;
+    EdtValorVenda: TDBEdit;
+    Label15: TLabel;
+    EdtLucro: TDBEdit;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    EdtPromoAtacado: TDBEdit;
+    Label19: TLabel;
+    EdtQtdAtacado: TDBEdit;
+    Label20: TLabel;
+    EdtLucroAtacado: TDBEdit;
+    Label21: TLabel;
+    MObservacao: TDBMemo;
+    Label22: TLabel;
+    ImgLogo: TImage;
+    ImgJoia: TImage;
+    Conexao: TFDConnection;
+    Q_Principal: TFDQuery;
+    DriverPG: TFDPhysPgDriverLink;
+    DsProduto: TDataSource;
+    Q_Principalid_produto: TIntegerField;
+    Q_Principalcod_barras: TWideStringField;
+    Q_Principalcod_referencia: TWideStringField;
+    Q_Principaldesc_completa: TWideStringField;
+    Q_Principaldesc_resumida: TWideStringField;
+    Q_Principalflg_ativo: TWideStringField;
+    Q_Principaltipo_produto: TWideStringField;
+    Q_Principaluso_consumo: TWideStringField;
+    Q_Principalpermite_venda: TWideStringField;
+    Q_Principalgrupo: TWideStringField;
+    Q_Principalcategoria: TWideStringField;
+    Q_Principalmarca: TWideStringField;
+    Q_Principalfornecedor: TWideStringField;
+    Q_Principalestoque: TFloatField;
+    Q_Principalvlr_compra: TFloatField;
+    Q_Principalvlr_venda: TFloatField;
+    Q_Principallucro_varejo: TFloatField;
+    Q_Principalqtd_atacado: TIntegerField;
+    Q_Principalvlr_venda_atacado: TFloatField;
+    Q_Principallucro_atacado: TFloatField;
+    Q_Principalobservacao: TWideStringField;
+    EdtDescCompleta: TDBEdit;
+    EdtDescResumida: TDBEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmProduto: TFrmProduto;
+
+implementation
+
+uses
+  TelaPrincipal;
+
+{$R *.dfm}
+
+end.

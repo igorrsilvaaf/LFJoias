@@ -1,0 +1,77 @@
+2022-11-10 08:00:53.629 -03 [7908] LOG:  database system was shut down at 2022-11-09 23:07:45 -03
+2022-11-10 08:05:53.245 -03 [6324] LOG:  checkpoint starting: time
+2022-11-10 08:05:53.692 -03 [6324] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.047 s, sync=0.037 s, total=0.448 s; sync files=2, longest=0.027 s, average=0.019 s; distance=0 kB, estimate=0 kB
+2022-11-10 22:40:29.423 -03 [11940] ERROR:  UNION types "char" and text cannot be matched at character 628
+2022-11-10 22:40:29.423 -03 [11940] STATEMENT:  select D.objoid id, C.relkind as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_class C on D.objoid = C.oid
+	where C.relnamespace = $1::oid and C.relkind != 'c'
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select T.oid id, 'T' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_type T on T.oid = D.objoid or T.typrelid = D.objoid
+	  left join pg_catalog.pg_class C on T.typrelid = C.oid
+	where T.typnamespace = $2::oid and (C.relkind = 'c' or C.relkind is null)
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, pg_catalog.translate(C.contype, 'pufc', 'kkxz') as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_constraint C on D.objoid = C.oid
+	where C.connamespace = $3::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, 't' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_trigger T on T.oid = D.objoid
+	  join pg_catalog.pg_class C on C.oid = T.tgrelid
+	where C.relnamespace = $4::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, 'R' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_rewrite R on R.oid = D.objoid
+	  join pg_catalog.pg_class C on C.oid = R.ev_class
+	where C.relnamespace = $5::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, 'F' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_proc P on P.oid = D.objoid
+	where P.pronamespace = $6::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, 'O' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_operator O on O.oid = D.objoid
+	where O.oprnamespace = $7::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, 'f' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_opfamily O on O.oid = D.objoid
+	where O.opfnamespace = $8::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, 'c' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_opclass O on O.oid = D.objoid
+	where O.opcnamespace = $9::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	union all
+	select D.objoid id, 'C' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	  join pg_catalog.pg_collation C on C.oid = D.objoid
+	where C.collnamespace = $10::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	
+	union all
+	select D.objoid id, 'P' as kind, D.objsubid sub_id, D.description
+	from pg_catalog.pg_description D
+	       join pg_catalog.pg_policy P on P.oid = D.objoid
+	       join pg_catalog.pg_class C on P.polrelid = C.oid
+	where C.relnamespace = $11::oid
+	--  and pg_catalog.age(D.xmin) <= #TXAGE
+	
+2022-11-10 22:40:55.078 -03 [6324] LOG:  checkpoint starting: time
+2022-11-10 22:40:56.029 -03 [6324] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.684 s, sync=0.143 s, total=0.953 s; sync files=5, longest=0.051 s, average=0.029 s; distance=0 kB, estimate=0 kB

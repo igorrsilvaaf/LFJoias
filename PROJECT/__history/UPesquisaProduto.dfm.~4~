@@ -1,0 +1,32 @@
+object Frm_pesquisa: TFrm_pesquisa
+  Left = 0
+  Top = 0
+  Caption = 'Frm_pesquisa'
+  ClientHeight = 810
+  ClientWidth = 1229
+  Color = clBtnFace
+  Constraints.MaxHeight = 849
+  Constraints.MaxWidth = 1245
+  Constraints.MinHeight = 849
+  Constraints.MinWidth = 1245
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1229
+    Height = 810
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 496
+    ExplicitTop = 160
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+  end
+end

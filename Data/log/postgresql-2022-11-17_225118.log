@@ -1,0 +1,16 @@
+2022-11-17 22:51:18.691 -03 [7152] LOG:  database system was shut down at 2022-11-17 22:50:37 -03
+2022-11-17 22:56:18.711 -03 [7128] LOG:  checkpoint starting: time
+2022-11-17 22:56:31.490 -03 [7128] PANIC:  could not rename file "pg_logical/replorigin_checkpoint.tmp" to "pg_logical/replorigin_checkpoint": Permission denied
+2022-11-17 22:56:43.393 -03 [13256] LOG:  database system was interrupted; last known up at 2022-11-17 22:51:18 -03
+2022-11-17 22:56:53.555 -03 [13256] LOG:  syncing data directory (fsync), elapsed time: 10.16 s, current path: ./base/1/2838_fsm
+2022-11-17 22:57:03.413 -03 [13256] LOG:  syncing data directory (fsync), elapsed time: 20.01 s, current path: ./base/16397/3430
+2022-11-17 22:57:13.443 -03 [13256] LOG:  syncing data directory (fsync), elapsed time: 30.04 s, current path: ./base/5/13367_fsm
+2022-11-17 22:57:20.416 -03 [13256] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-11-17 22:57:20.438 -03 [13256] LOG:  redo starts at 0/1A16A08
+2022-11-17 22:57:20.438 -03 [13256] LOG:  invalid record length at 0/1A16A40: wanted 24, got 0
+2022-11-17 22:57:20.438 -03 [13256] LOG:  redo done at 0/1A16A08 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2022-11-17 22:57:20.475 -03 [8676] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-11-17 22:57:20.583 -03 [8676] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.025 s, total=0.139 s; sync files=2, longest=0.015 s, average=0.013 s; distance=0 kB, estimate=0 kB
+2022-11-17 23:58:49.800 -03 [8676] LOG:  shutting down
+2022-11-17 23:58:49.821 -03 [8676] LOG:  checkpoint starting: shutdown immediate
+2022-11-17 23:58:49.906 -03 [8676] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.107 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB

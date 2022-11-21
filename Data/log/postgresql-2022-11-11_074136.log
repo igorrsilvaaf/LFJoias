@@ -1,0 +1,130 @@
+2022-11-11 07:41:38.297 -03 [8272] LOG:  database system was shut down at 2022-11-11 00:09:37 -03
+2022-11-11 07:46:38.271 -03 [8252] LOG:  checkpoint starting: time
+2022-11-11 07:46:50.254 -03 [8252] PANIC:  could not rename file "pg_logical/replorigin_checkpoint.tmp" to "pg_logical/replorigin_checkpoint": Permission denied
+2022-11-11 07:46:54.648 -03 [7636] LOG:  database system was interrupted; last known up at 2022-11-11 07:41:38 -03
+2022-11-11 07:47:04.657 -03 [7636] LOG:  syncing data directory (fsync), elapsed time: 10.00 s, current path: ./base/16397/2617_vm
+2022-11-11 07:47:14.658 -03 [7636] LOG:  syncing data directory (fsync), elapsed time: 20.00 s, current path: ./base/5/2603_vm
+2022-11-11 07:47:19.404 -03 [7636] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-11-11 07:47:19.421 -03 [7636] LOG:  redo starts at 0/19CAFF0
+2022-11-11 07:47:19.421 -03 [7636] LOG:  invalid record length at 0/19CB028: wanted 24, got 0
+2022-11-11 07:47:19.421 -03 [7636] LOG:  redo done at 0/19CAFF0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2022-11-11 07:47:19.441 -03 [4584] LOG:  checkpoint starting: end-of-recovery immediate wait
+2022-11-11 07:47:19.534 -03 [4584] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.024 s, total=0.109 s; sync files=2, longest=0.014 s, average=0.012 s; distance=0 kB, estimate=0 kB
+2022-11-11 10:11:20.105 -03 [15592] ERROR:  multiple primary keys for table "produto" are not allowed at character 589
+2022-11-11 10:11:20.105 -03 [15592] STATEMENT:  CREATE TABLE produto(
+		id_produto serial primary key,
+	    cod_barras varchar(20),
+	    cod_referencia varchar(20),
+	    desc_completa varchar(50),
+	    desc_resumida varchar(30),
+	    flg_ativo varchar(10),
+	    tipo_produto varchar(20),
+	    uso_consumo varchar(20),
+	    permite_venda varchar(5),
+	    grupo varchar(20),
+	    categoria varchar(20),
+	    marca varchar(20),
+	    fornecedor varchar(20),
+	    estoque float,
+	    vlr_compra float,
+	    vlr_venda float,
+	    lucro_varejo float,
+	    qtd_atacado integer,
+	    vlr_venda_atacado float,
+	    lucro_atacado float,
+	    observacao varchar(100),
+		constraint pk_id_produto primary key(id_produto)
+	);
+2022-11-11 10:11:41.682 -03 [15592] ERROR:  syntax error at or near ")" at character 588
+2022-11-11 10:11:41.682 -03 [15592] STATEMENT:  CREATE TABLE produto(
+		id_produto serial primary key,
+	    cod_barras varchar(20),
+	    cod_referencia varchar(20),
+	    desc_completa varchar(50),
+	    desc_resumida varchar(30),
+	    flg_ativo varchar(10),
+	    tipo_produto varchar(20),
+	    uso_consumo varchar(20),
+	    permite_venda varchar(5),
+	    grupo varchar(20),
+	    categoria varchar(20),
+	    marca varchar(20),
+	    fornecedor varchar(20),
+	    estoque float,
+	    vlr_compra float,
+	    vlr_venda float,
+	    lucro_varejo float,
+	    qtd_atacado integer,
+	    vlr_venda_atacado float,
+	    lucro_atacado float,
+	    observacao varchar(100),
+	);
+2022-11-11 10:12:19.901 -03 [4584] LOG:  checkpoint starting: time
+2022-11-11 10:12:25.345 -03 [4584] LOG:  checkpoint complete: wrote 41 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.777 s, sync=0.445 s, total=5.447 s; sync files=32, longest=0.057 s, average=0.014 s; distance=135 kB, estimate=135 kB
+2022-11-11 10:12:53.835 -03 [15592] ERROR:  relation "contatos" already exists
+2022-11-11 10:12:53.835 -03 [15592] STATEMENT:  CREATE TABLE contatos(
+	id_contato serial not null,
+	nome varchar(100) not null,
+	telefone integer,
+	celular integer,
+	fax integer,
+	email varchar(200),
+	email2 varchar(200),
+	observacao varchar(500),
+	constraint pk_id_contato PRIMARY KEY(id_contato)
+	);
+2022-11-11 10:15:09.421 -03 [6928] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 10:15:09.421 -03 [8300] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 10:15:09.422 -03 [11648] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 10:15:09.423 -03 [8124] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 10:15:09.428 -03 [15592] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 10:17:19.359 -03 [4584] LOG:  checkpoint starting: time
+2022-11-11 10:17:23.916 -03 [4584] LOG:  checkpoint complete: wrote 35 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.924 s, sync=0.434 s, total=4.557 s; sync files=30, longest=0.057 s, average=0.015 s; distance=153 kB, estimate=153 kB
+2022-11-11 11:07:20.023 -03 [4584] LOG:  checkpoint starting: time
+2022-11-11 11:07:21.410 -03 [4584] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.983 s, sync=0.165 s, total=1.388 s; sync files=6, longest=0.049 s, average=0.028 s; distance=6 kB, estimate=138 kB
+2022-11-11 14:49:25.579 -03 [13172] ERROR:  null value in column "cpf" of relation "clientes" violates not-null constraint
+2022-11-11 14:49:25.579 -03 [13172] DETAIL:  Failing row contains (null, 2, JURIDICA, LIBERADO, 2022-11-12, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null).
+2022-11-11 14:49:25.579 -03 [13172] STATEMENT:  INSERT INTO clientes
+	(id_cliente, tipo_pessoa, situacao, data_cadastro)
+	VALUES ($1, $2, $3, $4)
+2022-11-11 14:51:51.619 -03 [13172] ERROR:  null value in column "endereco" of relation "clientes" violates not-null constraint
+2022-11-11 14:51:51.619 -03 [13172] DETAIL:  Failing row contains (null, 2, JURIDICA, LIBERADO, 2022-11-12, 247.295.886-22, Ruan Carlos Eduardo Galvão, null, 368115045, Mairinque, A+, CASADO, 18120971, Mairinque, Dona Catarina, SP, null, null, null, null, null, null, null, null, null, null, null, null, 2022-11-10).
+2022-11-11 14:51:51.619 -03 [13172] STATEMENT:  INSERT INTO clientes
+	(id_cliente, tipo_pessoa, situacao, data_cadastro, 
+	  cpf, nome, rg, cidade_natural, tip_sangue, 
+	  estado_civil, cep, cidade, bairro, uf, 
+	  data_nascimento)
+	VALUES ($1, $2, $3, $4, 
+	  $5, $6, $7, $8, $9, 
+	  $10, $11, $12, $13, $14, 
+	  $15)
+2022-11-11 14:52:03.604 -03 [13172] ERROR:  null value in column "celular" of relation "clientes" violates not-null constraint
+2022-11-11 14:52:03.604 -03 [13172] DETAIL:  Failing row contains (null, 2, JURIDICA, LIBERADO, 2022-11-12, 247.295.886-22, Ruan Carlos Eduardo Galvão, null, 368115045, Mairinque, A+, CASADO, 18120971, Mairinque, Dona Catarina, SP, Praça da Igreja 3, 1, null, null, null, null, null, null, null, null, null, null, 2022-11-10).
+2022-11-11 14:52:03.604 -03 [13172] STATEMENT:  INSERT INTO clientes
+	(id_cliente, tipo_pessoa, situacao, data_cadastro, 
+	  cpf, nome, rg, cidade_natural, tip_sangue, 
+	  estado_civil, cep, cidade, bairro, uf, 
+	  endereco, numero, data_nascimento)
+	VALUES ($1, $2, $3, $4, 
+	  $5, $6, $7, $8, $9, 
+	  $10, $11, $12, $13, $14, 
+	  $15, $16, $17)
+2022-11-11 14:57:21.500 -03 [4584] LOG:  checkpoint starting: time
+2022-11-11 14:57:22.547 -03 [4584] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.757 s, sync=0.081 s, total=1.049 s; sync files=7, longest=0.023 s, average=0.012 s; distance=0 kB, estimate=124 kB
+2022-11-11 16:23:44.109 -03 [14940] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 16:27:53.271 -03 [17004] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 16:27:53.271 -03 [10820] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 16:27:53.274 -03 [14864] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2022-11-11 18:57:25.086 -03 [5568] ERROR:  canceling statement due to user request
+2022-11-11 18:57:25.420 -03 [4584] LOG:  shutting down
+2022-11-11 18:57:25.444 -03 [4584] LOG:  checkpoint starting: shutdown immediate
+2022-11-11 18:57:25.615 -03 [4584] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.024 s, total=0.195 s; sync files=1, longest=0.024 s, average=0.024 s; distance=0 kB, estimate=112 kB

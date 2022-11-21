@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/11/15 18:21:45.000.468,=D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\Unit1.pas</Transaction>
+    <Transaction>2022/11/15 18:24:04.000.071,D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\UFormat.pas=D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\Unit1.pas</Transaction>
+    <Transaction>2022/11/20 21:57:50.148,=D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\Unit1.pas</Transaction>
+    <Transaction>2022/11/20 22:01:08.334,D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\UPesquisaProduto.pas=D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\Unit1.pas</Transaction>
+    <Transaction>2022/11/20 22:01:08.334,D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\UPesquisaProduto.dfm=D:\MEGA\Projetos\Projetos em Delphi\SYMTER - Sistema de Cadastro\PROJECT\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
